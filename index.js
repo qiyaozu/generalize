@@ -23,10 +23,10 @@ var app = new Vue({
 
   computed: {
     markText() {
-      if (this.getCode.status) return '发送验证码'
+      if (this.getCode.status) return '获取验证码'
       else return `${this.getCode.time}s后重试`
     },
-    canLogin() {
+    canOpen() {
       if (this.phone.length === 11 && this.code.length === 6) {
         return true
       } else {

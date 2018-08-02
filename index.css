@@ -108,10 +108,17 @@
 }
 .cell > .code {
   flex: 0 0 18.66vw;
-  text-align: right;
+  padding: 3px;
+  text-align: center;
+  border-radius: 1vw;
+  border: .5px solid #13C678;
   font-size: 3.2vw;
-  color: #C1C1C1;
-  transform: translateX(-4vw);
+  color: #13C678;
+}
+.cell > .code.dis {
+  background: #B8B8B8;
+  border: none;
+  color: #fff;
 }
 .content {
   width: 80vw;
@@ -127,6 +134,43 @@
 }
 .voiceTip > span {
   color: #13C678;
+}
+.year_limit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6vw;
+  font-size: 4vw;
+  color: #B8B8B8;
+}
+.year_limit .limit-right .counter-wrapper {
+  display: inline-block;
+  border: .5px solid #B8B8B8;
+  border-radius: .5vw;
+}
+.year_limit .limit-right .counter-wrapper > span {
+  display: inline-block;
+}
+.year_limit .limit-right .counter-wrapper .counter-left,
+.year_limit .limit-right .counter-wrapper .counter-right {
+  width: 5vw;
+  height: 5vw;
+  line-height: 5vw;
+  text-align: center;
+  font-size: 2.6vw;
+}
+.year_limit .limit-right .counter-wrapper .counter-left {
+  border-right: .5px solid #B8B8B8;
+}
+.year_limit .limit-right .counter-wrapper .counter-right {
+  border-left: .5px solid #B8B8B8;
+}
+.year_limit .limit-right .counter-wrapper .counter-center {
+  width: 6vw;
+  height: 5vw;
+  line-height: 5vw;
+  text-align: center;
+  font-size: 4vw;
 }
 .loading {
   display: none;
@@ -149,7 +193,12 @@
 .pageBottom > button {
   flex: 0 0 40vw;
   height: 100%;
+  background: #B8B8B8;
   font-size: 4.8vw;
+  color: #fff;
+}
+.pageBottom > button.can {
+  background: #312E2D;
 }
 .pageBottom .bottom-left {
   flex: 1;

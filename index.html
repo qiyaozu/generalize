@@ -28,13 +28,22 @@
       <div class="cell scale-1px" style="margin-bottom: 0;">
         <img src="images/code.png" alt="">
         <input type="text" placeholder="请输入验证码" maxlength="6" v-model="code">
-        <span class="code" @click="getVerifyCode" v-text="markText"></span>
+        <span class="code" @click="getVerifyCode" v-text="markText" :class="!getCode.status?'dis':''"></span>
       </div>
       <p class="voiceTip">
         没有收到短信，试试
         <span class="blue-text" @click="getVoiceCode">语音验证码</span>
       </p>
-
+      <div class="year_limit scale-1px">
+        <div class="limit-left">开通年限</div>
+        <div class="limit-right">
+          <div class="counter-wrapper">
+            <span class="counter-left">-</span>
+            <span class="counter-center">3</span>
+            <span class="counter-right">+</span>
+          </div> 年
+        </div>
+      </div>
     </div>
     
 
@@ -53,7 +62,7 @@
     <!-- 页面底部 -->
     <div class="pageBottom">
       <div class="bottom-left">合计：￥6800</div>
-      <button>立即开通</button>
+      <button :class="canOpen?'can':''">立即开通</button>
     </div>
 
     <img src="images/loading.gif" alt="" class="loading">
