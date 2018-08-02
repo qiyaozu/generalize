@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta content="telephone=no" name="format-detection" />
+  <title>推广页</title>
+  <link rel="stylesheet" href="reset.css">
+  <link href="need/layer.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- 顶部图片 -->
+    <div class="top-img">
+      <img src="images/generalize_top.jpg" alt="">
+    </div>
+    <div class="content">
+      <!-- 两个输入框 -->
+      <div class="cell scale-1px">
+        <img src="images/phone.png" alt="">
+        <input type="text" placeholder="请输入手机号" maxlength="11" v-model="phone">
+      </div>
+      <div class="cell scale-1px" style="margin-bottom: 0;">
+        <img src="images/code.png" alt="">
+        <input type="text" placeholder="请输入验证码" maxlength="6" v-model="code">
+        <span class="code" @click="getVerifyCode" v-text="markText"></span>
+      </div>
+      <p class="voiceTip">
+        没有收到短信，试试
+        <span class="blue-text" @click="getVoiceCode">语音验证码</span>
+      </p>
+
+    </div>
+    
+
+    <!-- <div class="opt">
+      <input class="magic-radio" type="radio" name="radio" id="r1">
+      <label for="r1">Normal</label>
+    </div>
+    <div class="opt">
+      <input class="magic-radio" type="radio" name="radio" id="r2">
+      <label for="r2">立法吉林省多久发垃圾</label>
+    </div> -->
+
+    <!-- 提示内容 -->
+    <!-- <div class="tip">温馨提示：设计通会员一经开通不支持退款</div> -->
+
+    <!-- 页面底部 -->
+    <div class="pageBottom">
+      <div class="bottom-left">合计：￥6800</div>
+      <button>立即开通</button>
+    </div>
+
+    <img src="images/loading.gif" alt="" class="loading">
+  </div>
+  <!-- 开发环境版本，包含了用帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- 生产环境版本，优化了尺寸和速度 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  <script src="https://cdn.bootcss.com/zepto/1.1.7/zepto.min.js"></script>
+  <script src="layer.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
